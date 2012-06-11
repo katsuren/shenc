@@ -22,6 +22,7 @@ show encode の略。
 nkf がインストールされていること。
   - Linux なら yum install nkf
   - MacOSX なら brew install nkf とか port install nkf とか
+
 ===============================================================
 ※nkf は、The nkf Projectによる、文字コードの変換を行うプログラムです。
 詳細は以下のサイトをご覧下さい。
