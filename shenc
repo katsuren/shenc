@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function echo_enc() {
+  if [ -f $1 ]; then
+    local enc=`nkf -g $1`
+    echo "[$enc] : $1"
+    return
+  fi  
+
+  local path="$1/$2"
+  if [ -f $path ]; then
+    local enc=`nkf -g $path`
+    echo "[$enc] : $path"
+    return
+  else
+    local list=`ls $path`
+    for f in $list; do
+      echo_enc $path $f
+    done
+    return
+  fi  
+}
+
+
+if [ $# -gt 0 ]; then
+  list=`ls $1`
+  for f in $list; do
+    echo_enc $1 $f
+  done
+fi
