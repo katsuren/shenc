@@ -1,0 +1,4 @@
+shenc
+=====
+
+shows character encode
